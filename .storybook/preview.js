@@ -1,30 +1,28 @@
-import { ThemeProvider } from 'styled-components'
-import GlobalStyles from 'styles/global'
-import theme from 'styles/theme'
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "styles/global";
+import theme from "styles/theme";
 
 export const parameters = {
   backgrounds: {
-    default: 'won-light',
+    default: "won-light",
     values: [
       {
-        name: 'won-light',
-        value: theme.colors.white
+        name: "won-light",
+        value: theme.colors.white,
       },
       {
-        name: 'won-dark',
-        value: theme.colors.mainBg
-      }
-    ]
-  }
-}
-
+        name: "won-dark",
+        value: theme.colors.mainBg,
+      },
+    ],
+  },
+};
 
 export const decorators = [
-  (Story, ) => (
+  (Story) => (
     <ThemeProvider theme={theme}>
-      
-        <GlobalStyles />
-        <Story />
+      <GlobalStyles />
+      <Story />
     </ThemeProvider>
-  )
-]
+  ),
+];
